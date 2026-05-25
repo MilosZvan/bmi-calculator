@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header class="header">
+    <h1 class="header__title">BMI Calculator</h1>
+    <p class="header__subtitle">Body Mass Index — know your numbers</p>
+</header> <!-- e: heder -->
+<main class="main">
+    <div class="main__form">
+        <form class="main__form__form">
+            <label for="height">Height</label>
+            <input id="height" class="main__form__input" type="number" name="height" placeholder="175" min="0">
+            <label for="weight">Weight</label>
+            <input id="weight" class="main__form__input" type="number" name="weight" placeholder="70"  min="0">
+            <input type="submit" class="main__form__button" value="Calculate BMI">
+        </form>
+    </div>  <!-- e: main__form -->
+    <div class="main__results">
+        <div class="main__results__result">
+            <div class="main__results__result--bmi">
+                <p class="main__results__result--bmi--value">27.8</p>
+                <p class="main__results__result--bmi--label">kg / m<sup>2</sup></p>
+            </div>
+            <div class="main__results__result--state">
+                <span class="warning">Overweight</span>
+            </div>
+        </div> <!-- e: main__results__result -->
+        <div class="main__results__cards">
+            <div class="main__results__cards--container">
+                <div id="low" class="main__results__cards--card">
+                    <p class="main__results__card--label">Underweight</p>
+                    <p class="main__results__card--value">< 18.5</p>
+                </div>
+                <div id="normal" class="main__results__cards--card">
+                    <p class="main__results__card--label">Normal weight</p>
+                    <p class="main__results__card--value">18.5 – 24.9</p>
+                </div>
+            </div> <!-- e: main__results__cards--container -->
+            <div class="main__results__cards--container">
+
+                <div id="overweight" class="main__results__cards--card">
+                    <p class="main__results__card--label">Overweight</p>
+                    <p class="main__results__card--value">25.0 – 29.9</p>
+                </div>
+                <div id="obese" class="main__results__cards--card">
+                    <p class="main__results__card--label">Obese</p>
+                    <p class="main__results__card--value">≥ 30.0</p>
+                </div>
+            </div> <!-- e: main__results__cards--container -->
+        </div> <!-- e: main__results__cards -->
+        <div class="main__results__empty">
+            <div class="main__results__empty--icon"></div>
+            <p class="main_results--empty">Enter your height and weight to see your result</p>
+        </div>
+    </div> <!-- e: main__results -->
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
